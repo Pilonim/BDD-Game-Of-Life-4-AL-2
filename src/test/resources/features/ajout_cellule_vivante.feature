@@ -12,3 +12,4 @@ Feature: Ajout d'une cellule vivante
     And Une cellule vivante aux coordonnées 5;5
     When Une cellule est crée aux coordonnées 5;5
     Then La cellule 5;5 doit être vivante
+
