@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class GridSteps {
     private Grid grid;
 
-    @Given("^Un jeu de la vie configure$")
+    @Given("^Un jeu de la vie configuré$")
     public void unJeuDeLaVieConfigure() {
         try {
             Class.forName("org.java.esgi.gameOfLife.Grid");
@@ -25,7 +25,7 @@ public class GridSteps {
         }
     }
 
-    @When("^Une grille de taille \"([^\"]*)\" par \"([^\"]*)\" est cree$")
+    @When("^Une grille de taille \"([^\"]*)\" par \"([^\"]*)\" est créée$")
     public void uneGrilleDeTailleParEstCree(Integer width, Integer height){
         grid = new Grid(width,height);
     }
@@ -50,17 +50,17 @@ public class GridSteps {
         assertEquals(grid.getMAXSIZE(), widthMax);
     }
 
-    @Then("^Aucune grille n'est cree$")
+    @Then("^Aucune grille n'est créé$")
     public void aucuneGrilleNEstCree() {
         assertNull(grid.getGrid());
     }
 
-    @Given("Une grille de jeu initialiser avec une taille de {int};{int}")
+    @Given("Une grille de jeu initialisée avec une taille de {int};{int}")
     public void uneGrilleDeJeuInitialiserAvecUneTailleDeX(Integer width, Integer height) {
         grid = new Grid(width,height);
     }
 
-    @When("Une cellule est crée aux coordonnées {int};{int}")
+    @When("Une cellule est créée aux coordonnées {int};{int}")
     public void uneCelluleEstCréeAuxCoordonnéesX(Integer x1, Integer y1) {
         grid.reAwake(x1,y1);
     }
@@ -122,7 +122,7 @@ public class GridSteps {
     }
 
 
-    @When("On redimenssionne la grille en {int};{int}")
+    @When("On redimensionne la grille en {int};{int}")
     public void onRedimenssionneLaGrilleEn(Integer x1, Integer y1) {
         grid.resize(x1,y1);
     }
@@ -133,7 +133,7 @@ public class GridSteps {
         assertEquals(y1, grid.height);
     }
 
-    @When("On renitialise la partie avec une taille de {int};{int}")
+    @When("On réinitialise la partie avec une taille de {int};{int}")
     public void onRenitialiseLaPartieAvecUneTailleDe(Integer width, Integer height) {
         grid = new Grid(width,height);
     }
